@@ -1,0 +1,628 @@
+/* Universal */
+* {
+    color: white;
+    margin:0px;
+}
+
+/* NOTE: This webpage is subdivided into "Navbar", "Toppage",
+ "Midpage", and "Bottompage" */
+
+                /* --DEFAULT STYLES-- */
+
+                /* -Navbar- */
+/* This has the navbar and the title */
+
+/* Navbar in general */
+nav {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding:10px;
+}
+
+/* This is basiclly a unordered list */
+.navbar {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    font-family:Roboto;
+    list-style: none;
+    margin:10px;
+}
+
+/* This sets up the contents inside the unordered list */
+.navitem {
+    margin-right: 20px;
+    background-color: black;
+}
+
+/* This sets up the title */
+.titlename {
+    font-size: 24pt;
+}
+
+/* This sets up the links */
+a {
+    text-decoration: none;
+}
+
+                /* -Toppage- */
+/* This subdivision has the large background image along with the 
+huge text saying: "Featured Shows"*/
+
+/* The "toppage div itself" */
+.toppage {
+    text-align:center;
+    justify-content:center;
+    width:100%;
+    height: 25vw;
+}
+
+/* This is the huge text saying: "Featured Shows", it has the 
+default z-index */
+.big-text {
+    font-size: 40pt;
+    margin-top: 15%;
+    font-family:Georgia;
+    font-weight: lighter;
+}
+
+/* This is the background div that makes elements inside of it 
+have the z-index of -1 */
+.background {
+    z-index: -1;
+    background-color: black;
+}
+
+/* This is the huge background image */
+.backimage {
+    z-index: -1;
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    width:100%;
+    height: auto;
+}
+
+/* This inserts a 50px tall and screen-wide black area above the backimage 
+so that it looks natural */
+.blacktop {
+    z-index: -1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height: 50px;
+    background-color: black;
+}
+
+                /* -Midpage- */
+/* This has the show lists along with the month display */
+
+/* This is the midpage div itself */
+.midpage {
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+
+/* This is the box where it displays the month */
+.month {
+    background-color:silver;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin:10px;
+    font-family:Georgia;
+    font-weight: lighter;
+}
+
+/* This is the div where it lists the shows */
+.showlist {
+    background-color: white;
+}
+
+/* This div contains an individual show */
+.oneshow {
+    background-color:white;
+}
+
+/* This div displays the contents of an individual show */
+.showrow {
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* This sets up the text format for the text in the show */
+.showinfo {
+    background-color: white;
+    color: black;
+    margin: 10px;
+    text-align: center;
+    font-family:Georgia;
+}
+
+/* This is the show image */
+.showimg {
+    width: 40%;
+    height: 40%;
+}
+
+/* This is a button for the show to read-more */
+.read-button {
+    width: 128px;
+    height: 64px;
+    background-color: gold;
+    border-style:solid;
+    border-width:1px;
+    border-color: gray;
+    margin: 10px;
+    font-family:Georgia;
+    font-size: 16pt;
+}
+/* This is a button for the show to read-more when it is pressed */
+.read-button:active {
+    width: 128px;
+    height: 64px;
+    background-color: goldenrod;
+    border-style:solid;
+    border-width:1px;
+    border-color: black;
+    font-family:Georgia;
+    font-size: 16pt;
+}
+
+/* This is a silver line that is below the contents of an individual show */
+.silver-line {
+    width: 400px;
+    height: 2px;
+    background-color: silver;
+    margin:10px;
+}
+
+                /* -Bottompage- */
+/* This subdivision contains the map, the info, the other shows, and
+ the social media platforms that they use. Also, the content rearranges
+ itself the the screen grows or shrinks */
+
+ /* The bottompage div itself */
+.bottompage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    background-color: black;
+}
+
+/* This is the map */
+.map {
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+}
+
+/* This is a grid area below the map or to the right of the map where it
+ it has the info */
+.bottomgrid {
+    display: grid;
+    grid-template-columns: 32px 300px;
+    grid-template-rows: auto auto auto auto;
+    gap: 5px;
+    margin: 10px;
+    justify-content: space-around;
+    align-content: stretch;
+}
+
+/* This is the individual grid */
+.grid-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* This is the header */
+.grid-header {
+    font-family:Roboto;
+    margin-top:10px;
+    font-size: 20pt;
+}
+
+/* This is the text for the grid */
+.grid-text {
+    font-family:Roboto;
+    font-size: 12pt;
+}
+
+/* This sets up the icon to be gold color */
+i {
+    color: gold;
+}
+
+/* The next 20 classes below are the individual grid boxes, the reason why
+ I set up the locations of the boxes individualy because they get rearranged
+ when the screen changes size */
+.grid-1 {
+    grid-column-start: -1;
+    grid-column-end: -2;
+}
+.grid-2 {
+    grid-column-start: -1;
+    grid-column-end: 1;
+}
+.grid-3 {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: -1;
+    grid-column-end: 1;
+}
+.grid-4 {
+    grid-column-start: -1;
+    grid-column-end: 1;
+    grid-row-start: 11;
+    grid-row-end: 12;
+}
+.grid-5 {
+    grid-column-start: -2;
+    grid-column-end: -3;
+}
+.grid-6 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.grid-7 {
+    grid-row-start: 7;
+    grid-row-end: 8;
+    grid-column-start: -1;
+    grid-column-end: 1;
+}
+.grid-8 {
+    grid-column-start: -1;
+    grid-column-end: 1;
+    grid-row-start: 12;
+    grid-row-end: 13;
+}
+.grid-9 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.grid-10 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.grid-11 {
+    grid-row-start: 8;
+    grid-row-end: 9;
+    grid-column-start: -1;
+    grid-column-end: 1;
+}
+.grid-12 {
+    grid-column-start: -1;
+    grid-column-end: 1;
+    grid-row-start: 13;
+    grid-row-end: 14;
+}
+.grid-13 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+.grid-14 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+.grid-15 {
+    grid-row-start: 9;
+    grid-row-end: 10;
+    grid-column-start: -1;
+    grid-column-end: 1;
+}
+.grid-16 {
+    grid-column-start: -1;
+    grid-column-end: 1;
+    grid-row-start: 14;
+    grid-row-end: 15;
+}
+.grid-17 {
+    grid-column-start: -4;
+    grid-column-end: -5;
+}
+.grid-18 {
+    grid-column-start: -5;
+    grid-column-end: -6;
+}
+.grid-19 {
+    grid-row-start: 10;
+    grid-row-end: 11;
+    grid-column-start: -1;
+    grid-column-end: 1;
+}
+.grid-20 {
+    grid-column-start: -1;
+    grid-column-end: 1;
+    grid-row-start: 15;
+    grid-row-end: 16;
+}
+
+                /* --900px width or wider-- */
+/* This changes some classes when the screen is 900 pixels or wider */
+@media only screen and (min-width: 900px) {
+    /* This makes the nav tag a row instead of column
+     meaning that the title and the navbar are in a row rather than a
+     column*/
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family:Georgia;
+        margin:0px;
+        padding: 10px;
+        background-color: black;
+    }
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        font-family:Roboto;
+        list-style: none;
+        margin:10px;
+        background-color: black;
+    }
+    .navitem {
+        margin-right: 45px;
+        background-color: black;
+    }
+    
+    /* This updates the toppage */
+    .toppage {
+        text-align:center;
+        justify-content:center;
+        width:100%;
+        height: 25vw;
+    }
+
+    /* This updates the backimage */
+    .backimage {
+        z-index: -1;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width:100%;
+        height: auto;
+    }
+    
+    /* This removes the black top above the background image */
+    .blacktop {
+        z-index: -1;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width:100%;
+        height: 0px;
+    }
+
+    /* This increases the size of the big text */
+    .big-text {
+        font-size: 64pt;
+        margin-top: 20%;
+    }
+
+    /* This changes the padding of the month display*/
+    .month {        
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+
+    /* This changes the showrow from column to row */
+    .showrow {
+        background-color:white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    /* This updates the showinfo text from center to left */
+    .showinfo {
+        text-align: left;
+    }
+    
+    /* This adusts the image size */
+    .showimg {
+        margin: 10px;
+        width: auto;
+        height: auto;
+
+    }
+    
+    /* This adusts the margin for the button */
+    .read-button {
+        width: 128px;
+        height: 64px;
+        background-color: gold;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-family: Georgia;
+        font-size: 16pt;
+    }
+    
+    /* This widens the silver-line from 400px to 800px */
+    .silver-line {
+        width: 800px;
+        height: 2px;
+        background-color: silver;
+        margin:10px;
+    }
+
+    /* This rearranges the bottomgrid completely */
+    .bottomgrid {
+        display: grid;
+        grid-template-columns: 32px minmax(100px, 300px) minmax(100px, 300px) minmax(100px, 300px);
+        grid-template-rows: auto auto auto auto;
+        gap: 10px;
+        margin: 10px;
+        justify-content: space-around;
+        align-content: stretch;
+    }
+    .grid-1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .grid-2 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .grid-3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .grid-4 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .grid-5 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .grid-6 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .grid-7 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .grid-8 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .grid-9 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .grid-10 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .grid-11 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .grid-12 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .grid-13 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .grid-14 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .grid-15 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .grid-16 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .grid-17 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    .grid-18 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    .grid-19 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    .grid-20 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+
+}
+
+               /* --1400px width or wider-- */
+/* This changes some classes when the screen is 1,400 pixels or wider */
+@media only screen and (min-width: 1400px) {
+    
+    /* This again increases the size of the big text */
+    .big-text {
+        font-size: 80pt;
+        margin-top: 20%;
+    }
+
+    /* This makes the bottompage class row instead of column */
+    .bottompage {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
